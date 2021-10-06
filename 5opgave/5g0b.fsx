@@ -1,3 +1,8 @@
+/// <summary> Funktionen firstColumn tager imod vilkårlig liste af lister. Hvis der ikke er nogen tomme indrelister
+/// retuneres en liste med de første elementer af de indre lister, ellers retuneres en tom liste.</summary>
+/// <param name = "llst"> En aplpha liste af lister. </param>
+/// <returns> En liste med de første elementer af den indre liste, 
+/// hvis der ikke er nogen tomme lister i "llst", ellers retuneres en tom liste. </returns>
 let firstColumn (llst: 'a list list) : 'a list =
   let notEmpty = List.forall (fun (xs : 'a list) -> xs.IsEmpty = false) llst
   if notEmpty = true then
