@@ -9,7 +9,9 @@ let isTable ( llst : 'a list list ) : bool =
   let len1 = llst1.Length
   let sameLen = List.forall  (fun (xs: 'a list) -> xs.Length = len1) llst
   let notEmpty = List.forall (fun (xs : 'a list) -> xs.IsEmpty = false) llst
-  if sameLen = true && notEmpty = true then true else false 
+  if sameLen = true && notEmpty = true then true 
+  else 
+    false 
 
 let x = [[1;2;3;4]; [1;2;3;4]]
 let y = [[1;2;3;4];[]; [1;2;3;4]]
